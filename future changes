@@ -1,0 +1,90 @@
+HTML — найди блок .lang-switch и замени целиком:
+
+<div class="lang-switch">
+  <div class="lang-dropdown" id="langDropdown">
+    <button class="lang-selected" onclick="document.getElementById('langDropdown').classList.toggle('open')">
+      <span id="langCurrent">RU</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="lang-options">
+      <button class="lang-opt" data-lang="ru">RU</button>
+      <button class="lang-opt" data-lang="kz">KZ</button>
+      <button class="lang-opt" data-lang="uz">UZ</button>
+      <button class="lang-opt" data-lang="tm">TM</button>
+      <button class="lang-opt" data-lang="tj">TJ</button>
+      <button class="lang-opt" data-lang="ky">KG</button>
+      <button class="lang-opt" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+CSS — добавь перед </style>
+
+.lang-dropdown { position: relative; }
+
+.lang-selected {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.9);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-selected:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+.lang-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(21,36,51,0.1);
+  overflow: hidden;
+  z-index: 100;
+  min-width: 80px;
+}
+
+.lang-dropdown.open .lang-options { display: block; }
+
+.lang-opt {
+  display: block;
+  width: 100%;
+  padding: 10px 18px;
+  border: 0;
+  background: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.lang-opt:hover { background: var(--surface-2); color: var(--brand); }
+
+JS — замени текущий обработчик языков:
+
+document.querySelectorAll('.lang-opt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyLang(btn.dataset.lang);
+    document.getElementById('langCurrent').textContent = btn.textContent;
+    document.getElementById('langDropdown').classList.remove('open');
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#langDropdown')) {
+    document.getElementById('langDropdown').classList.remove('open');
+  }
+});
+
+Последняя строка — закрывает dropdown при клике в любом месте страницы.
