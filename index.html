@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUMA Central Asia</title>
+  <meta name="description" content="Официальный дистрибьютор AUMA в Центральной Азии. Электрические приводы, редукторы, блоки управления. Казахстан, Узбекистан, Кыргызстан, Таджикистан, Туркменистан.">
+  <meta name="keywords" content="AUMA, электроприводы, арматура, Казахстан, Центральная Азия, дистрибьютор">
+  <meta name="author" content="Actuator Service">
+
+  <!-- Open Graph — как сайт выглядит при шеринге в мессенджерах -->
+  <meta property="og:title" content="AUMA Central Asia — официальный дистрибьютор">
+  <meta property="og:description" content="Электрические приводы и промышленная арматура для Центральной Азии.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auma.asia">
+  <style>
+    :root {
+      --bg: #f3f6f9;
+      --surface: #ffffff;
+      --surface-2: #eef3f7;
+      --text: #203243;
+      --muted: #6e7f8e;
+      --line: #d8e0e7;
+      --brand: #0070B0;
+      --brand-dark: #0070B0;
+      --shadow: 0 18px 50px rgba(23, 39, 56, 0.08);
+      --container: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(10,79,132,0.05), transparent 26%),
+        linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(var(--container), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.86);
+      border-bottom: 1px solid rgba(216,224,231,0.82);
+    }
+
+    .topbar-inner {
+      min-height: 84px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 230px;
+    }
+
+    .logo-mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 22px rgba(10,79,132,0.18);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-text strong {
+      font-size: 40px;
+      line-height: 1;
+      color: var(--brand);
+      letter-spacing: 0.08em;
+    }
+
+    .logo-text span {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: var(--brand);
+      transition: width 0.2s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after { width: 100%; }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 280px;
+    }
+
+    .lang-btn {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+    .hero { padding: 34px 0 40px; }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(247,250,252,0.92));
+      border-radius: 34px;
+      border: 1px solid rgba(216,224,231,0.92);
+      box-shadow: var(--shadow);
+      min-height: 660px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('img/flags-bg.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.45;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 80px 64px 56px;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 34px;
+      align-items: center;
+      min-height: 660px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(216,224,231,0.95);
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 700px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 15px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+      box-shadow: 0 14px 30px rgba(10,79,132,0.22);
+    }
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(216,224,231,0.94);
+    }
+    .btn-secondary:hover {
+      background: var(--brand-dark);
+      color: #ffffff;
+      border-color: var(--brand-dark);
+    }
+      
+    .btn-small { padding: 11px 16px; font-size: 14px; }
+
+    .visual-frame {
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(216,224,231,0.92);
+      background: linear-gradient(180deg, #f8fafc, #edf3f7);
+      box-shadow: 0 18px 42px rgba(22, 138, 255, 0.164);
+    }
+
+    .hero-visual {
+      min-height: 400px;
+      background:
+        linear-gradient(135deg, rgba(10,79,132,0.08), transparent 45%),
+        url('img/auma basic 1 block.png') center/contain no-repeat,
+        linear-gradient(180deg, #f8fafc, #edf3f7);
+      background-size: auto, cover, cover;
+      position: relative;
+    }
+
+    .hero-visual::after {
+      content: 'AUMA SA / SQ / AC / GST';
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(216,224,231,0.92);
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .section { padding: 16px 0 64px; }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-header p {
+      margin: 0;
+      max-width: 780px;
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .drive-grid,
+    .segment-grid,
+    .service-grid,
+    .contact-grid,
+    .tools-grid,
+    .quote-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .drive-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .segment-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: 0.86fr 1.14fr; }
+    .tools-grid { grid-template-columns: 1fr 1fr; }
+    .quote-grid { grid-template-columns: 1.15fr 0.85fr; }
+
+    .card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(216,224,231,0.92);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 36px rgba(21,36,51,0.06);
+    }
+
+    .card h3 {
+      margin: 20px 0 10px;
+      font-size: 22px;
+    }
+
+    .card p,
+    .card li,
+    .muted {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .card ul { margin: 14px 0 0; padding-left: 18px; }
+
+    .card-media {
+      position: relative;
+      height: 185px;
+      margin: -24px -24px 20px;
+      border-bottom: 1px solid rgba(216,224,231,0.92);
+      background: linear-gradient(180deg, #f4f8fb, #edf2f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid rgba(216,224,231,0.84);
+      color: var(--brand-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .series-card { display: flex; flex-direction: column; }
+    .series-card .actions,
+    .product-card .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .catalog-toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .toolbar-input,
+    .toolbar-select,
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(216,224,231,0.94);
+      background: rgba(255,255,255,0.96);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(10,79,132,0.55);
+      box-shadow: 0 0 0 4px rgba(10,79,132,0.08);
+    }
+
+    .toolbar-input { min-width: 260px; flex: 1; }
+    .toolbar-select { min-width: 210px; flex: 0.45; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(216,224,231,0.92);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 14px 36px rgba(21,36,51,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-card .title-row {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      min-width: 84px;
+      border-radius: 999px;
+      background: rgba(10,79,132,0.08);
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .selector-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field,
+    .field-full {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .selector-result {
+      margin-top: 18px;
+      padding: 18px;
+      background: var(--surface-2);
+      border-radius: 20px;
+      border: 1px solid rgba(216,224,231,0.9);
+      min-height: 140px;
+    }
+
+    .selector-result h4 { margin: 0 0 8px; font-size: 20px; }
+
+    .contact-list { display: grid; gap: 14px; }
+
+    .contact-item {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--surface-2);
+      border: 1px solid rgba(216,224,231,0.84);
+    }
+
+    .contact-item strong { display: block; margin-bottom: 4px; font-size: 15px; }
+    .contact-item a,
+    .contact-item span { color: var(--muted); line-height: 1.55; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .form-actions {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .form-note { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+    .quote-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .quote-table th,
+    .quote-table td {
+      border-bottom: 1px solid rgba(216,224,231,0.86);
+      padding: 12px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .quote-table th {
+      color: var(--brand-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .summary-box {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--surface-2);
+      border: 1px solid rgba(216,224,231,0.9);
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 15px;
+    }
+
+    .footer { padding: 18px 0 44px; }
+
+    .footer-card {
+      background: linear-gradient(180deg, var(--brand-dark), #062c49);
+      color: rgba(255,255,255,0.92);
+      border-radius: 28px;
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      box-shadow: 0 20px 44px rgba(7,58,98,0.2);
+    }
+
+    .footer small { display: block; color: rgba(255,255,255,0.64); margin-top: 6px; line-height: 1.5; }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(11,22,33,0.58);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 80;
+    }
+
+    .modal.open { display: flex; }
+
+    .modal-card {
+      width: min(980px, 100%);
+      max-height: min(88vh, 980px);
+      overflow: auto;
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 30px 70px rgba(7,20,31,0.24);
+      border: 1px solid rgba(216,224,231,0.9);
+    }
+
+    .modal-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(216,224,231,0.88);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .modal-body { padding: 24px; display: grid; gap: 22px; }
+
+    .modal-close {
+      border: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .td1-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .td1-box {
+      border: 1px solid rgba(216,224,231,0.9);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .td1-head {
+      padding: 14px 16px;
+      background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .td1-body { padding: 16px; }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .spec-table td {
+      border-bottom: 1px solid rgba(216,224,231,0.84);
+      padding: 10px 0;
+      vertical-align: top;
+    }
+
+    .spec-table td:first-child {
+      color: var(--muted);
+      width: 42%;
+      padding-right: 12px;
+    }
+
+    .mini-kpi {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .mini-kpi .item {
+      background: var(--surface-2);
+      border: 1px solid rgba(216,224,231,0.86);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .mini-kpi strong { display: block; font-size: 20px; color: var(--brand-dark); }
+
+    @media (max-width: 1180px) {
+      .topbar-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 14px 0;
+      }
+      .lang-switch,
+      .logo-wrap { min-width: auto; }
+      .hero-inner,
+      .drive-grid,
+      .segment-grid,
+      .service-grid,
+      .contact-grid,
+      .tools-grid,
+      .quote-grid,
+      .product-grid,
+      .td1-grid { grid-template-columns: 1fr; }
+      .hero-card,
+      .hero-inner { min-height: auto; }
+      .hero-inner { padding: 54px 24px 34px; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(var(--container), calc(100% - 18px)); }
+      .logo-text strong { font-size: 32px; }
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 17px; }
+      .form-grid,
+      .selector-grid { grid-template-columns: 1fr; }
+      .nav,
+      .lang-switch,
+      .hero-actions,
+      .form-actions { justify-content: flex-start; }
+      .flag { opacity: 0.20; }
+      .section { padding: 12px 0 42px; }
+      .mini-kpi { grid-template-columns: 1fr; }
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 999;
+      background: #fff;
+      border: 1px solid rgba(216,224,231,0.92);
+      border-radius: 16px;
+      box-shadow: 0 18px 50px rgba(23,39,56,0.13);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      max-width: 360px;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .toast-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+        <a class="logo-wrap" href="#top" aria-label="AUMA Central Asia">
+          <img src="img/auma-logo.svg" alt="AUMA" style="height:36px;">
+          <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);" data-i18n="brandRegion">Central Asia</span>
+        </a>
+
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#drives" data-i18n="navDrives">Виды приводов</a>
+        <a href="#solutions" data-i18n="navSolutions">Решения</a>
+        <a href="#service" data-i18n="navService">Сервис</a>
+        <a href="#contacts" data-i18n="navContacts">Контакты</a>
+      </nav>
+
+      <div class="lang-switch" aria-label="Переключение языка">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="kk">KZ</button>
+        <button class="lang-btn" data-lang="uz">UZ</button>
+        <button class="lang-btn" data-lang="tk">TM</button>
+        <button class="lang-btn" data-lang="tg">TJ</button>
+        <button class="lang-btn" data-lang="ky">KG</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-inner">
+            <div>
+              <div class="eyebrow" data-i18n="eyebrow">Приводы и автоматизация арматуры</div>
+              <h1 data-i18n="heroTitle">AUMA Central Asia — сайт, каталог, подбор и запрос стоимости в одном инструменте</h1>
+              <p data-i18n="heroText">Современные электрические приводы, редукторы, блоки управления, сервис и быстрый подбор оборудования для проектов в Центральной Азии.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#selector" data-i18n="heroCtaPrimary">Подобрать привод</a>
+                <a class="btn btn-secondary" href="#catalog" data-i18n="heroCtaSecondary">Открыть каталог</a>
+              </div>
+            </div>
+
+            <div class="visual-frame hero-visual"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="drives">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="drivesTitle">Виды приводов</h2>
+            <p data-i18n="drivesText">Основные серии AUMA для проектов в энергетике, нефтегазе, водоснабжении и промышленности.</p>
+          </div>
+        </div>
+
+        <div class="drive-grid">
+          <article class="card series-card">
+            <div class="card-media"><img src="https://www.auma.com/com/images/products/drehantriebe/37881/image-thumb__37881__product_details_header_image/sa.3c988321.png" alt="AUMA SA SAR"></div>
+            <h3>SA / SAR</h3>
+            <p data-i18n="series1Text">Многооборотные приводы для задвижек и вентилей.</p>
+            <ul>
+              <li data-i18n="series1Li1">Крутящий момент до 32 000 Нм</li>
+              <li data-i18n="series1Li2">Работа в тяжёлых условиях</li>
+              <li data-i18n="series1Li3">Совместимы с AC и AM</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small" type="button" onclick="filterCatalog('multi-turn')" data-i18n="showSeriesBtn">Показать модели</button>
+            </div>
+          </article>
+
+          <article class="card series-card">
+            <div class="card-media"><img src="https://www.auma.com/com/images/products/schwenkantriebe/44355/image-thumb__44355__searchResultsCard/sq_sqr_1.35718224.png" alt="AUMA SQ SQR"></div>
+            <h3>SQ / SQR</h3>
+            <p data-i18n="series2Text">Неполноповоротные приводы для заслонок и кранов.</p>
+            <ul>
+              <li data-i18n="series2Li1">Угол поворота до 90°</li>
+              <li data-i18n="series2Li2">Высокая надёжность</li>
+              <li data-i18n="series2Li3">Компактные размеры</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small" type="button" onclick="filterCatalog('part-turn')" data-i18n="showSeriesBtn">Показать модели</button>
+            </div>
+          </article>
+
+          <article class="card series-card">
+            <div class="card-media"><img src="https://auma.com/com/images/products/steuerungen/37918/image-thumb__37918__width1200/ac.ff9a479d.png" alt="AUMA AC AM"></div>
+            <h3>AC / AM</h3>
+            <p data-i18n="series3Text">Интеллектуальные блоки управления приводами.</p>
+            <ul>
+              <li data-i18n="series3Li1">Интеграция в SCADA</li>
+              <li data-i18n="series3Li2">Диагностика и защита</li>
+              <li data-i18n="series3Li3">Удалённый контроль</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small" type="button" onclick="filterCatalog('control')" data-i18n="showSeriesBtn">Показать модели</button>
+            </div>
+          </article>
+
+          <article class="card series-card">
+            <div class="card-media"><img src="https://auma.com/com/images/products/drehgetriebe/37896/image-thumb__37896__width1200/gst.499da7db.png" alt="AUMA GST GK"></div>
+            <h3>GST / GK</h3>
+            <p data-i18n="series4Text">Редукторы для увеличения крутящего момента.</p>
+            <ul>
+              <li data-i18n="series4Li1">Для тяжёлой арматуры</li>
+              <li data-i18n="series4Li2">Высокая нагрузка</li>
+              <li data-i18n="series4Li3">Комбинация с приводами</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small" type="button" onclick="filterCatalog('gearbox')" data-i18n="showSeriesBtn">Показать модели</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="solutionsTitle">Решения</h2>
+            <p data-i18n="solutionsText">Отрасли применения приводов AUMA и типовые сценарии использования в Центральной Азии.</p>
+          </div>
+        </div>
+
+        <div class="segment-grid">
+          <article class="card">
+            <div class="card-media"><img src="img/water.jpg" alt="Water"></div>
+            <div class="chip">Water</div>
+            <h3 data-i18n="seg1Title">Водоснабжение и водоотведение</h3>
+            <p data-i18n="seg1Text">Насосные станции, очистные сооружения, муниципальные и промышленные трубопроводные системы.</p>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="img/power.jpg" alt="Power"></div>
+            <div class="chip">Power</div>
+            <h3 data-i18n="seg2Title">Энергетика</h3>
+            <p data-i18n="seg2Text">ТЭЦ, ГРЭС, гидроэнергетика и энергетическая инфраструктура с высокими требованиями к надёжности.</p>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="img/oil & gaz.jpg" alt="Oil Gas"></div>
+            <div class="chip">Oil &amp; Gas</div>
+            <h3 data-i18n="seg3Title">Нефтегазовая отрасль</h3>
+            <p data-i18n="seg3Text">Трубопроводы, переработка, перекачка и узлы с требованиями по защите и контролю.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="serviceTitle">Сервис</h2>
+            <p data-i18n="serviceText">Сервисная служба работает согласно международным стандартам и сопровождает оборудование на всём жизненном цикле.</p>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article class="card">
+            <div class="card-media"><img src="img/inst.webp" alt="Диагностика"></div>
+            <h3 data-i18n="srv1Title">Монтаж и ввод в эксплуатацию</h3>
+            <p data-i18n="srv1Text">Пусконаладка, настройка, проверка и запуск оборудования на объекте.</p>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="img/diagnostics.jpg" alt="Диагностика"></div>
+            <h3 data-i18n="srv2Title">Диагностика и обслуживание</h3>
+            <p data-i18n="srv2Text">Плановое обслуживание, устранение неисправностей и рекомендации по эксплуатации.</p>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="img/service.jpeg" style="object-fit: cover; object-position: top;" alt="Диагностика"></div>
+            <h3 data-i18n="srv3Title">Ремонт и модернизация</h3>
+            <p data-i18n="srv3Text">Ремонт, замена узлов и модернизация под текущие требования объекта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="contactsTitle">Контакты и заявка</h2>
+            <p data-i18n="contactsText">Свяжитесь с нами по общим вопросам, продажам или сервису. Ниже — форма для первичного запроса.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card">
+            <h3 data-i18n="contactCardTitle">Контактная информация</h3>
+            <div class="contact-list">
+              <div class="contact-item"><div>✉</div><div><strong data-i18n="emailMainTitle">Почта для связи</strong><a href="mailto:info@auma.asia">info@auma.asia</a></div></div>
+              <div class="contact-item"><div>💼</div><div><strong data-i18n="emailSalesTitle">Отдел продаж</strong><a href="mailto:sales@auma.asia">sales@auma.asia</a></div></div>
+              <div class="contact-item"><div>🧰</div><div><strong data-i18n="emailServiceTitle">Сервисный отдел</strong><a href="mailto:service@auma.asia">service@auma.asia</a></div></div>
+              <div class="contact-item"><div>☎</div><div><strong data-i18n="phoneTitle">Телефон</strong><a href="tel:+77273131469">+7 (727) 313 14 69</a></div></div>
+              <div class="contact-item"><div>📱</div><div><strong data-i18n="mobileTitle">Мобильный</strong><a href="tel:+77017323574">+7 701 732 35 74</a></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="formTitle">Оставить заявку</h3>
+            <form id="contactForm">
+              <div class="form-grid">
+                <div class="field"><label for="name" data-i18n="fieldName">Имя</label><input id="name" type="text" placeholder="Ваше имя" data-i18n-placeholder="fieldNamePlaceholder" /></div>
+                <div class="field"><label for="company" data-i18n="fieldCompany">Компания</label><input id="company" type="text" placeholder="Название компании" data-i18n-placeholder="fieldCompanyPlaceholder" /></div>
+                <div class="field"><label for="phone" data-i18n="fieldPhone">Телефон</label><input id="phone" type="text" placeholder="Контактный телефон" data-i18n-placeholder="fieldPhonePlaceholder" /></div>
+                <div class="field"><label for="email" data-i18n="fieldEmail">Email</label><input id="email" type="email" placeholder="Рабочая почта" data-i18n-placeholder="fieldEmailPlaceholder" /></div>
+                <div class="field"><label for="equipment" data-i18n="fieldEquipment">Тип оборудования</label><select id="equipment"><option data-i18n="optEquipmentDefault">Выберите тип</option><option data-i18n="optEquipment1">Многооборотный привод</option><option data-i18n="optEquipment2">Неполноповоротный привод</option><option data-i18n="optEquipment3">Блок управления</option><option data-i18n="optEquipment4">Редуктор</option></select></div>
+                <div class="field"><label for="industry" data-i18n="fieldIndustry">Отрасль</label><select id="industry"><option data-i18n="optIndustryDefault">Выберите отрасль</option><option data-i18n="optIndustry1">Вода и водоотведение</option><option data-i18n="optIndustry2">Энергетика</option><option data-i18n="optIndustry3">Нефтегаз</option><option data-i18n="optIndustry4">Промышленность</option></select></div>
+                <div class="field field-full"><label for="task" data-i18n="fieldTask">Описание задачи</label><textarea id="task" placeholder="Опишите объект, арматуру, условия работы и пожелания" data-i18n-placeholder="fieldTaskPlaceholder"></textarea></div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit" data-i18n="formSubmit">Отправить заявку</button>
+                <div class="form-note" data-i18n="formNote">Следующим шагом можно подключить отправку на email или CRM.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        <div>
+          <strong>AUMA</strong>
+          <small data-i18n="footerText">Central Asia website concept. Каталог, подбор и запрос стоимости объединены в один инструмент для продаж.</small>
+        </div>
+        <a class="btn btn-secondary" href="#top" data-i18n="backTop">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="muted" id="modalSerie"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        const dicts = {
+          ru: {
+            brandRegion: "Central Asia",
+            navDrives: "Виды приводов",
+            navCatalog: "Каталог",
+            navSelector: "Подбор",
+            navSolutions: "Решения",
+            navService: "Сервис",
+            navContacts: "Контакты",
+            eyebrow: "Приводы и автоматизация арматуры",
+            heroTitle: "AUMA Central Asia — сайт, каталог, подбор и запрос стоимости в одном инструменте",
+            heroText: "Современные электрические приводы, редукторы, блоки управления, сервис и быстрый подбор оборудования для проектов в Центральной Азии.",
+            heroCtaPrimary: "Подобрать привод",
+            heroCtaSecondary: "Открыть каталог",
+            drivesTitle: "Виды приводов",
+            drivesText: "Основные серии AUMA для проектов в энергетике, нефтегазе, водоснабжении и промышленности.",
+            series1Text: "Многооборотные приводы для задвижек и вентилей.",
+            series1Li1: "Крутящий момент до 32 000 Нм",
+            series1Li2: "Работа в тяжёлых условиях",
+            series1Li3: "Совместимы с AC и AM",
+            series2Text: "Неполноповоротные приводы для заслонок и кранов.",
+            series2Li1: "Угол поворота до 90°",
+            series2Li2: "Высокая надёжность",
+            series2Li3: "Компактные размеры",
+            series3Text: "Интеллектуальные блоки управления приводами.",
+            series3Li1: "Интеграция в SCADA",
+            series3Li2: "Диагностика и защита",
+            series3Li3: "Удалённый контроль",
+            series4Text: "Редукторы для увеличения крутящего момента.",
+            series4Li1: "Для тяжёлой арматуры",
+            series4Li2: "Высокая нагрузка",
+            series4Li3: "Комбинация с приводами",
+            showSeriesBtn: "Показать модели",
+            catalogTitle: "Мини каталог моделей",
+            catalogText: "Краткие карточки моделей, открытие TD1 и отправка запроса на стоимость без отображения цен.",
+            searchPlaceholder: "Поиск по серии, модели, применению",
+            filterAll: "Все типы",
+            filterApplicationAll: "Все отрасли",
+            selectorTitle: "Подбор привода",
+            selectorText: "Простой опросный лист для первичной рекомендации модели и быстрого перехода к карточке или запросу стоимости.",
+            selectorFormTitle: "Опросный лист",
+            fieldType: "Тип оборудования",
+            optMulti: "Многооборотный",
+            optPart: "Неполноповоротный",
+            optControl: "Блок управления",
+            optGearbox: "Редуктор",
+            fieldApplication: "Отрасль",
+            fieldControl: "Управление",
+            optAny: "Любое",
+            optNone: "Не требуется",
+            fieldEx: "Исполнение",
+            optStandard: "Стандарт",
+            fieldTorque: "Требуемый момент, Нм",
+            selectBtn: "Подобрать модель",
+            resetBtn: "Сбросить",
+            selectorResultTitle: "Результат подбора",
+            selectorResultText: "Выберите параметры и нажмите кнопку подбора. Система предложит наиболее подходящую модель.",
+            quoteBuilderTitle: "Запрос стоимости",
+            quoteBuilderText: "Добавляйте модели из каталога или из результата подбора. Здесь формируется запрос на коммерческое предложение.",
+            thModel: "Модель",
+            thQty: "Кол-во",
+            quoteEmpty: "Пока нет выбранных позиций.",
+            summaryItems: "Позиций",
+            summaryQty: "Количество",
+            summaryStatus: "Стоимость",
+            priceOnRequest: "Цена по запросу",
+            buildQuoteBtn: "Сформировать запрос",
+            solutionsTitle: "Решения",
+            solutionsText: "Отрасли применения приводов AUMA и типовые сценарии использования в Центральной Азии.",
+            seg1Title: "Водоснабжение и водоотведение",
+            seg1Text: "Насосные станции, очистные сооружения, муниципальные и промышленные трубопроводные системы.",
+            seg2Title: "Энергетика",
+            seg2Text: "ТЭЦ, ГРЭС, гидроэнергетика и энергетическая инфраструктура с высокими требованиями к надёжности.",
+            seg3Title: "Нефтегазовая отрасль",
+            seg3Text: "Трубопроводы, переработка, перекачка и узлы с требованиями по защите и контролю.",
+            serviceTitle: "Сервис",
+            serviceText: "Сервисная служба работает согласно международным стандартам и сопровождает оборудование на всём жизненном цикле.",
+            srv1Title: "Монтаж и ввод в эксплуатацию",
+            srv1Text: "Пусконаладка, настройка, проверка и запуск оборудования на объекте.",
+            srv2Title: "Диагностика и обслуживание",
+            srv2Text: "Плановое обслуживание, устранение неисправностей и рекомендации по эксплуатации.",
+            srv3Title: "Ремонт и модернизация",
+            srv3Text: "Ремонт, замена узлов и модернизация под текущие требования объекта.",
+            contactsTitle: "Контакты и заявка",
+            contactsText: "Свяжитесь с нами по общим вопросам, продажам или сервису.",
+            contactCardTitle: "Контактная информация",
+            emailMainTitle: "Почта для связи",
+            emailSalesTitle: "Отдел продаж",
+            emailServiceTitle: "Сервисный отдел",
+            phoneTitle: "Телефон",
+            mobileTitle: "Мобильный",
+            formTitle: "Оставить заявку",
+            fieldName: "Имя",
+            fieldNamePlaceholder: "Ваше имя",
+            fieldCompany: "Компания",
+            fieldCompanyPlaceholder: "Название компании",
+            fieldPhone: "Телефон",
+            fieldPhonePlaceholder: "Контактный телефон",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Рабочая почта",
+            fieldEquipment: "Тип оборудования",
+            optEquipmentDefault: "Выберите тип",
+            optEquipment1: "Многооборотный привод",
+            optEquipment2: "Неполноповоротный привод",
+            optEquipment3: "Блок управления",
+            optEquipment4: "Редуктор",
+            fieldIndustry: "Отрасль",
+            optIndustryDefault: "Выберите отрасль",
+            optIndustry1: "Вода и водоотведение",
+            optIndustry2: "Энергетика",
+            optIndustry3: "Нефтегаз",
+            optIndustry4: "Промышленность",
+            fieldTask: "Описание задачи",
+            fieldTaskPlaceholder: "Опишите объект, арматуру, условия работы и пожелания",
+            formSubmit: "Отправить заявку",
+            formNote: "Следующим шагом можно подключить отправку на email или CRM.",
+            formSuccess: "Заявка отправлена! Мы свяжемся с вами в ближайшее время.",
+            footerText: "Официальный дистрибьютор AUMA в Центральной Азии.",
+            backTop: "Наверх",
+          },
+
+          kk: {
+            brandRegion: "Орталық Азия",
+            navDrives: "Жетек түрлері",
+            navCatalog: "Каталог",
+            navSelector: "Таңдау",
+            navSolutions: "Шешімдер",
+            navService: "Сервис",
+            navContacts: "Байланыс",
+            eyebrow: "Жетектер және арматура автоматикасы",
+            heroTitle: "AUMA Орталық Азия — сайт, каталог, таңдау және баға сұрату бір құралда",
+            heroText: "Орталық Азия жобалары үшін заманауи электр жетектері, редукторлар, басқару блоктары, сервис және жабдықты жылдам таңдау.",
+            heroCtaPrimary: "Жетек таңдау",
+            heroCtaSecondary: "Каталогты ашу",
+            drivesTitle: "Жетек түрлері",
+            drivesText: "Энергетика, мұнай-газ, сумен жабдықтау және өнеркәсіп жобалары үшін AUMA негізгі сериялары.",
+            series1Text: "Задвижкалар мен вентильдерге арналған көп айналмалы жетектер.",
+            series1Li1: "32 000 Нм дейін бұрылу моменті",
+            series1Li2: "Ауыр жағдайларда жұмыс",
+            series1Li3: "AC және AM-мен үйлесімді",
+            series2Text: "Заслонкалар мен крандарға арналған толық емес айналмалы жетектер.",
+            series2Li1: "90° дейін бұрылу бұрышы",
+            series2Li2: "Жоғары сенімділік",
+            series2Li3: "Компактты өлшемдер",
+            series3Text: "Жетектерді интеллектуалды басқару блоктары.",
+            series3Li1: "SCADA-ға интеграция",
+            series3Li2: "Диагностика және қорғаныс",
+            series3Li3: "Қашықтан басқару",
+            series4Text: "Бұрылу моментін арттыруға арналған редукторлар.",
+            series4Li1: "Ауыр арматура үшін",
+            series4Li2: "Жоғары жүктеме",
+            series4Li3: "Жетектермен үйлесім",
+            showSeriesBtn: "Модельдерді көрсету",
+            catalogTitle: "Мини модельдер каталогы",
+            catalogText: "Модель карточкалары, TD1 ашу және баға белгісіз коммерциялық ұсыныс сұрату.",
+            searchPlaceholder: "Сериясы, моделі, қолданысы бойынша іздеу",
+            filterAll: "Барлық түрлер",
+            filterApplicationAll: "Барлық салалар",
+            selectorTitle: "Жетекті таңдау",
+            selectorText: "Модельді бастапқы ұсыну үшін қарапайым сауалнама.",
+            selectorFormTitle: "Сауалнама",
+            fieldType: "Жабдық түрі",
+            optMulti: "Көп айналмалы",
+            optPart: "Толық емес айналмалы",
+            optControl: "Басқару блогы",
+            optGearbox: "Редуктор",
+            fieldApplication: "Сала",
+            fieldControl: "Басқару",
+            optAny: "Кез келген",
+            optNone: "Қажет емес",
+            fieldEx: "Орындалу",
+            optStandard: "Стандарт",
+            fieldTorque: "Қажетті момент, Нм",
+            selectBtn: "Модель таңдау",
+            resetBtn: "Тазалау",
+            selectorResultTitle: "Таңдау нәтижесі",
+            selectorResultText: "Параметрлерді таңдап, таңдау батырмасын басыңыз.",
+            quoteBuilderTitle: "Баға сұрату",
+            quoteBuilderText: "Каталогтан немесе таңдау нәтижесінен модельдер қосыңыз.",
+            thModel: "Модель",
+            thQty: "Саны",
+            quoteEmpty: "Таңдалған позициялар жоқ.",
+            summaryItems: "Позициялар",
+            summaryQty: "Саны",
+            summaryStatus: "Құны",
+            priceOnRequest: "Баға сұраныс бойынша",
+            buildQuoteBtn: "Сұраныс жасау",
+            solutionsTitle: "Шешімдер",
+            solutionsText: "AUMA жетектерінің қолданыс салалары және Орталық Азиядағы типтік сценарийлер.",
+            seg1Title: "Сумен жабдықтау және су бұру",
+            seg1Text: "Сорғы станциялары, тазарту құрылыстары, муниципалдық және өнеркәсіптік құбыр жүйелері.",
+            seg2Title: "Энергетика",
+            seg2Text: "ЖЭС, ГРЭС, гидроэнергетика және жоғары сенімділік талаптары бар энергетикалық инфрақұрылым.",
+            seg3Title: "Мұнай-газ саласы",
+            seg3Text: "Құбыр желілері, өңдеу, айдау және қорғаныс пен бақылау талаптары бар торабтар.",
+            serviceTitle: "Сервис",
+            serviceText: "Сервис қызметі халықаралық стандарттарға сәйкес жұмыс істейді.",
+            srv1Title: "Монтаж және іске қосу",
+            srv1Text: "Пусконаладка, баптау, тексеру және объектіде жабдықты іске қосу.",
+            srv2Title: "Диагностика және қызмет көрсету",
+            srv2Text: "Жоспарлы қызмет, ақауларды жою және пайдалану бойынша ұсыныстар.",
+            srv3Title: "Жөндеу және жаңарту",
+            srv3Text: "Жөндеу, тораптарды ауыстыру және объектінің ағымдағы талаптарына сәйкес жаңарту.",
+            contactsTitle: "Байланыс және өтінім",
+            contactsText: "Жалпы сұрақтар, сату немесе сервис бойынша бізге хабарласыңыз.",
+            contactCardTitle: "Байланыс ақпараты",
+            emailMainTitle: "Байланыс поштасы",
+            emailSalesTitle: "Сату бөлімі",
+            emailServiceTitle: "Сервис бөлімі",
+            phoneTitle: "Телефон",
+            mobileTitle: "Мобильді",
+            formTitle: "Өтінім қалдыру",
+            fieldName: "Аты",
+            fieldNamePlaceholder: "Сіздің атыңыз",
+            fieldCompany: "Компания",
+            fieldCompanyPlaceholder: "Компания атауы",
+            fieldPhone: "Телефон",
+            fieldPhonePlaceholder: "Байланыс телефоны",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Жұмыс поштасы",
+            fieldEquipment: "Жабдық түрі",
+            optEquipmentDefault: "Түрді таңдаңыз",
+            optEquipment1: "Көп айналмалы жетек",
+            optEquipment2: "Толық емес айналмалы жетек",
+            optEquipment3: "Басқару блогы",
+            optEquipment4: "Редуктор",
+            fieldIndustry: "Сала",
+            optIndustryDefault: "Саланы таңдаңыз",
+            optIndustry1: "Су және су бұру",
+            optIndustry2: "Энергетика",
+            optIndustry3: "Мұнай-газ",
+            optIndustry4: "Өнеркәсіп",
+            fieldTask: "Тапсырма сипаттамасы",
+            fieldTaskPlaceholder: "Объектіні, арматураны, жұмыс жағдайларын сипаттаңыз",
+            formSubmit: "Өтінім жіберу",
+            formNote: "Келесі қадамда email немесе CRM-ге жіберуді қосуға болады.",
+            formSuccess: "Өтінім жіберілді! Жақын арада хабарласамыз.",
+            footerText: "Орталық Азиядағы AUMA ресми дистрибьюторы.",
+            backTop: "Жоғары",
+          },
+
+          uz: {
+            brandRegion: "Markaziy Osiyo",
+            navDrives: "Haydovchi turlari",
+            navCatalog: "Katalog",
+            navSelector: "Tanlash",
+            navSolutions: "Yechimlar",
+            navService: "Servis",
+            navContacts: "Aloqa",
+            eyebrow: "Haydovchilar va armatura avtomatikasi",
+            heroTitle: "AUMA Markaziy Osiyo — sayt, katalog, tanlash va narx so'rash bir vositada",
+            heroText: "Markaziy Osiyo loyihalari uchun zamonaviy elektr haydovchilar, reduktorlar, boshqaruv bloklari, servis va tezkor uskunalar tanlash.",
+            heroCtaPrimary: "Haydovchi tanlash",
+            heroCtaSecondary: "Katalogni ochish",
+            drivesTitle: "Haydovchi turlari",
+            drivesText: "Energetika, neftgaz, suv ta'minoti va sanoat loyihalari uchun AUMA asosiy seriyalari.",
+            series1Text: "Zadvizhkalar va ventillar uchun ko'p aylanuvchi haydovchilar.",
+            series1Li1: "32 000 Nm gacha burilish momenti",
+            series1Li2: "Og'ir sharoitlarda ishlash",
+            series1Li3: "AC va AM bilan mos keladi",
+            series2Text: "Zaslonkalar va kranlar uchun to'liq bo'lmagan aylanuvchi haydovchilar.",
+            series2Li1: "90° gacha burilish burchagi",
+            series2Li2: "Yuqori ishonchlilik",
+            series2Li3: "Kompakt o'lchamlar",
+            series3Text: "Haydovchilarni intellektual boshqarish bloklari.",
+            series3Li1: "SCADA bilan integratsiya",
+            series3Li2: "Diagnostika va himoya",
+            series3Li3: "Masofaviy boshqaruv",
+            series4Text: "Burilish momentini oshirish uchun reduktorlar.",
+            series4Li1: "Og'ir armatura uchun",
+            series4Li2: "Yuqori yuklanma",
+            series4Li3: "Haydovchilar bilan kombinatsiya",
+            showSeriesBtn: "Modellarni ko'rsatish",
+            catalogTitle: "Mini modellar katalogi",
+            catalogText: "Model kartochkalari, TD1 ochish va narxsiz tijorat taklifi so'rash.",
+            searchPlaceholder: "Seriya, model, qo'llanish bo'yicha qidirish",
+            filterAll: "Barcha turlar",
+            filterApplicationAll: "Barcha sohalar",
+            selectorTitle: "Haydovchini tanlash",
+            selectorText: "Model uchun dastlabki tavsiya beruvchi oddiy so'rovnoma.",
+            selectorFormTitle: "So'rovnoma",
+            fieldType: "Uskunа turi",
+            optMulti: "Ko'p aylanuvchi",
+            optPart: "To'liq bo'lmagan aylanuvchi",
+            optControl: "Boshqaruv bloki",
+            optGearbox: "Reduktor",
+            fieldApplication: "Soha",
+            fieldControl: "Boshqaruv",
+            optAny: "Istalgan",
+            optNone: "Kerak emas",
+            fieldEx: "Ijro",
+            optStandard: "Standart",
+            fieldTorque: "Talab qilinadigan moment, Nm",
+            selectBtn: "Model tanlash",
+            resetBtn: "Tozalash",
+            selectorResultTitle: "Tanlash natijasi",
+            selectorResultText: "Parametrlarni tanlang va tanlash tugmasini bosing.",
+            quoteBuilderTitle: "Narx so'rash",
+            quoteBuilderText: "Katalogdan yoki tanlash natijasidan modellar qo'shing.",
+            thModel: "Model",
+            thQty: "Miqdori",
+            quoteEmpty: "Tanlangan pozitsiyalar yo'q.",
+            summaryItems: "Pozitsiyalar",
+            summaryQty: "Miqdori",
+            summaryStatus: "Narxi",
+            priceOnRequest: "Narx so'rov asosida",
+            buildQuoteBtn: "So'rov shakllantirish",
+            solutionsTitle: "Yechimlar",
+            solutionsText: "AUMA haydovchilarini qo'llash sohalari va Markaziy Osiyodagi tipik stsenariylar.",
+            seg1Title: "Suv ta'minoti va suv oqova",
+            seg1Text: "Nasos stantsiyalari, tozalash inshootlari, munitsipal va sanoat quvur tizimlari.",
+            seg2Title: "Energetika",
+            seg2Text: "IES, GRES, gidroenergetika va yuqori ishonchlilik talablari bilan energetika infratuzilmasi.",
+            seg3Title: "Neft-gaz sohasi",
+            seg3Text: "Quvurlar, qayta ishlash, pompалаш va himoya va nazorat talablari bilan tugunlar.",
+            serviceTitle: "Servis",
+            serviceText: "Servis xizmati xalqaro standartlarga muvofiq ishlaydi.",
+            srv1Title: "Montaj va ishga tushirish",
+            srv1Text: "Sozlash, tekshirish va ob'ektda uskunani ishga tushirish.",
+            srv2Title: "Diagnostika va texnik xizmat",
+            srv2Text: "Rejalashtirilgan xizmat, nosozliklarni bartaraf etish va foydalanish bo'yicha tavsiyalar.",
+            srv3Title: "Ta'mirlash va modernizatsiya",
+            srv3Text: "Ta'mirlash, tugunlarni almashtirish va ob'ektning joriy talablariga moslash.",
+            contactsTitle: "Aloqa va ariza",
+            contactsText: "Umumiy savollar, sotish yoki servis bo'yicha biz bilan bog'laning.",
+            contactCardTitle: "Aloqa ma'lumotlari",
+            emailMainTitle: "Aloqa pochtasi",
+            emailSalesTitle: "Savdo bo'limi",
+            emailServiceTitle: "Servis bo'limi",
+            phoneTitle: "Telefon",
+            mobileTitle: "Mobil",
+            formTitle: "Ariza qoldirish",
+            fieldName: "Ism",
+            fieldNamePlaceholder: "Ismingiz",
+            fieldCompany: "Kompaniya",
+            fieldCompanyPlaceholder: "Kompaniya nomi",
+            fieldPhone: "Telefon",
+            fieldPhonePlaceholder: "Aloqa telefoni",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Ish pochtasi",
+            fieldEquipment: "Uskunа turi",
+            optEquipmentDefault: "Turni tanlang",
+            optEquipment1: "Ko'p aylanuvchi haydovchi",
+            optEquipment2: "To'liq bo'lmagan aylanuvchi haydovchi",
+            optEquipment3: "Boshqaruv bloki",
+            optEquipment4: "Reduktor",
+            fieldIndustry: "Soha",
+            optIndustryDefault: "Sohani tanlang",
+            optIndustry1: "Suv va suv oqova",
+            optIndustry2: "Energetika",
+            optIndustry3: "Neft-gaz",
+            optIndustry4: "Sanoat",
+            fieldTask: "Vazifa tavsifi",
+            fieldTaskPlaceholder: "Ob'ekt, armatura, ish sharoitlarini tasvirlang",
+            formSubmit: "Ariza yuborish",
+            formNote: "Keyingi bosqichda email yoki CRM-ga yuborishni ulash mumkin.",
+            formSuccess: "Ariza yuborildi! Tez orada murojaat qilamiz.",
+            footerText: "Markaziy Osiyoda AUMA rasmiy distribyutori.",
+            backTop: "Yuqoriga",
+          },
+
+          tk: {
+            brandRegion: "Merkezi Aziýa",
+            navDrives: "Hereketlendirijiler",
+            navCatalog: "Katalog",
+            navSelector: "Saýlamak",
+            navSolutions: "Çözgütler",
+            navService: "Hyzmat",
+            navContacts: "Habarlaşmak",
+            eyebrow: "Hereketlendirijiler we armatura awtomatikasy",
+            heroTitle: "AUMA Merkezi Aziýa — saýt, katalog, saýlamak we baha soramak bir guraldyr",
+            heroText: "Merkezi Aziýa taslamalary üçin häzirki zaman elektrik hereketlendirijileri, redüktorlar, dolandyryş bloklary, hyzmat we enjamy çalt saýlamak.",
+            heroCtaPrimary: "Hereketlendiriji saýlamak",
+            heroCtaSecondary: "Katalogy açmak",
+            drivesTitle: "Hereketlendiriji görnüşleri",
+            drivesText: "Energetika, nebit-gaz, suw üpjünçiligi we senagat taslamalary üçin AUMA esasy seriýalary.",
+            series1Text: "Klapanlar we turba armaturasy üçin köp aýlanmaly hereketlendirijiler.",
+            series1Li1: "32 000 Nm çenli aýlanma momenti",
+            series1Li2: "Agyr şertlerde işlemek",
+            series1Li3: "AC we AM bilen gabat gelýär",
+            series2Text: "Klapanlar we kranlar üçin doly bolmadyk aýlanmaly hereketlendirijiler.",
+            series2Li1: "90° çenli aýlanma burç",
+            series2Li2: "Ýokary ygtybarlylyk",
+            series2Li3: "Kompakt ölçegler",
+            series3Text: "Hereketlendirijileri intellektual dolandyryş bloklary.",
+            series3Li1: "SCADA bilen integrasiýa",
+            series3Li2: "Diagnostika we gorag",
+            series3Li3: "Uzakdan dolandyryş",
+            series4Text: "Aýlanma momentini artdyrmak üçin redüktorlar.",
+            series4Li1: "Agyr armatura üçin",
+            series4Li2: "Ýokary ýüklenme",
+            series4Li3: "Hereketlendirijiler bilen kombinasiýa",
+            showSeriesBtn: "Modelleri görkezmek",
+            catalogTitle: "Mini modeller katalogy",
+            catalogText: "Model kartlary we bahasy görkezilmän täjirçilik teklibini soramak.",
+            searchPlaceholder: "Seriýa, model, ulanylýan ýer boýunça gözleg",
+            filterAll: "Ähli görnüşler",
+            filterApplicationAll: "Ähli pudaklar",
+            selectorTitle: "Hereketlendiriji saýlamak",
+            selectorText: "Model üçin başlangyç maslahat berýän ýönekeý soraglar.",
+            selectorFormTitle: "Soraglar",
+            fieldType: "Enjam görnüşi",
+            optMulti: "Köp aýlanmaly",
+            optPart: "Doly bolmadyk aýlanmaly",
+            optControl: "Dolandyryş blogy",
+            optGearbox: "Redüktor",
+            fieldApplication: "Pudak",
+            fieldControl: "Dolandyryş",
+            optAny: "Islendik",
+            optNone: "Gerek däl",
+            fieldEx: "Ýerine ýetiriş",
+            optStandard: "Standart",
+            fieldTorque: "Talap edilýän moment, Nm",
+            selectBtn: "Model saýlamak",
+            resetBtn: "Arassalamak",
+            selectorResultTitle: "Saýlamak netijesi",
+            selectorResultText: "Parametrleri saýlaň we saýlamak düwmesine basyň.",
+            quoteBuilderTitle: "Baha soramak",
+            quoteBuilderText: "Katalogdan ýa-da saýlamak netijelerinden modeller goşuň.",
+            thModel: "Model",
+            thQty: "Sany",
+            quoteEmpty: "Saýlanan pozisiýalar ýok.",
+            summaryItems: "Pozisiýalar",
+            summaryQty: "Sany",
+            summaryStatus: "Bahasy",
+            priceOnRequest: "Baha soralyp",
+            buildQuoteBtn: "Soragy döretmek",
+            solutionsTitle: "Çözgütler",
+            solutionsText: "AUMA hereketlendirijileriniň ulanylýan pudaklary we Merkezi Aziýadaky adaty ssenariýalar.",
+            seg1Title: "Suw üpjünçiligi we lagym",
+            seg1Text: "Nasos stansiýalary, arassalaýyş desgalary, şäher we senagat turba ulgamlary.",
+            seg2Title: "Energetika",
+            seg2Text: "IES, GRES, gidroenergetika we ýokary ygtybarlylyk talaplary bolan energetika infrastrukturasy.",
+            seg3Title: "Nebit-gaz pudagy",
+            seg3Text: "Turba geçirijileri, gaýtadan işlemek, sormak we gorag we gözegçilik talaplary bolan düwünler.",
+            serviceTitle: "Hyzmat",
+            serviceText: "Hyzmat gullugy halkara standartlaryna laýyklykda işleýär.",
+            srv1Title: "Gurnama we işe girizmek",
+            srv1Text: "Sazlamak, barlamak we desgada enjamlary işe girizmek.",
+            srv2Title: "Diagnostika we hyzmat",
+            srv2Text: "Meýilleşdirilen hyzmat, näsazlyklary aradan aýyrmak we ulanyş boýunça maslahatlar.",
+            srv3Title: "Abatlamak we döwrebaplaşdyrmak",
+            srv3Text: "Abatlamak, düwünleri çalyşmak we desganyň häzirki talaplary üçin döwrebaplaşdyrmak.",
+            contactsTitle: "Habarlaşmak we ýüztutma",
+            contactsText: "Umumy soraglar, satuw ýa-da hyzmat boýunça bize ýüz tutuň.",
+            contactCardTitle: "Habarlaşmak maglumatlary",
+            emailMainTitle: "Habarlaşmak poçtasy",
+            emailSalesTitle: "Satuw bölümi",
+            emailServiceTitle: "Hyzmat bölümi",
+            phoneTitle: "Telefon",
+            mobileTitle: "Mobil",
+            formTitle: "Ýüztutma galdyrmak",
+            fieldName: "At",
+            fieldNamePlaceholder: "Adyňyz",
+            fieldCompany: "Kompaniýa",
+            fieldCompanyPlaceholder: "Kompaniýanyň ady",
+            fieldPhone: "Telefon",
+            fieldPhonePlaceholder: "Habarlaşmak telefony",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Iş poçtasy",
+            fieldEquipment: "Enjam görnüşi",
+            optEquipmentDefault: "Görnüşi saýlaň",
+            optEquipment1: "Köp aýlanmaly hereketlendiriji",
+            optEquipment2: "Doly bolmadyk aýlanmaly hereketlendiriji",
+            optEquipment3: "Dolandyryş blogy",
+            optEquipment4: "Redüktor",
+            fieldIndustry: "Pudak",
+            optIndustryDefault: "Pudagy saýlaň",
+            optIndustry1: "Suw we lagym",
+            optIndustry2: "Energetika",
+            optIndustry3: "Nebit-gaz",
+            optIndustry4: "Senagat",
+            fieldTask: "Wezipäni beýan etmek",
+            fieldTaskPlaceholder: "Desgany, armaturany, iş şertlerini beýan ediň",
+            formSubmit: "Ýüztutma ibermek",
+            formNote: "Indiki ädimde email ýa-da CRM-e ibermegi birikdirip bolýar.",
+            formSuccess: "Ýüztutma iberildi! Ýakyn wagtda habarlaşarys.",
+            footerText: "Merkezi Aziýada AUMA resmi distribýutory.",
+            backTop: "Ýokary",
+          },
+
+          tg: {
+            brandRegion: "Осиёи Марказӣ",
+            navDrives: "Намудҳои муҳаррик",
+            navCatalog: "Каталог",
+            navSelector: "Интихоб",
+            navSolutions: "Ҳалҳо",
+            navService: "Хизматрасонӣ",
+            navContacts: "Тамос",
+            eyebrow: "Муҳаррикҳо ва автоматикаи арматура",
+            heroTitle: "AUMA Осиёи Марказӣ — сайт, каталог, интихоб ва дархости нарх дар як абзор",
+            heroText: "Муҳаррикҳои барқии муосир, редукторҳо, блокҳои идоракунӣ, хизматрасонӣ ва интихоби тезкори таҷҳизот барои лоиҳаҳои Осиёи Марказӣ.",
+            heroCtaPrimary: "Интихоби муҳаррик",
+            heroCtaSecondary: "Кушодани каталог",
+            drivesTitle: "Намудҳои муҳаррик",
+            drivesText: "Силсилаҳои асосии AUMA барои лоиҳаҳо дар энергетика, нефту газ, таъминоти об ва саноат.",
+            series1Text: "Муҳаррикҳои гардиши бисёр барои задвижкаҳо ва вентилҳо.",
+            series1Li1: "Лаҳзаи гардиш то 32 000 Нм",
+            series1Li2: "Кор дар шароити вазнин",
+            series1Li3: "Мутобиқ бо AC ва AM",
+            series2Text: "Муҳаррикҳои гардиши нопурра барои заслонкаҳо ва кранҳо.",
+            series2Li1: "Кунҷи гардиш то 90°",
+            series2Li2: "Эътимоднокии баланд",
+            series2Li3: "Андозаҳои компактӣ",
+            series3Text: "Блокҳои интеллектуалии идоракунии муҳаррикҳо.",
+            series3Li1: "Интегратсия бо SCADA",
+            series3Li2: "Диагностика ва ҳифз",
+            series3Li3: "Идоракунии аз дур",
+            series4Text: "Редукторҳо барои зиёд кардани лаҳзаи гардиш.",
+            series4Li1: "Барои арматураи вазнин",
+            series4Li2: "Бори баланд",
+            series4Li3: "Омезиш бо муҳаррикҳо",
+            showSeriesBtn: "Нишон додани моделҳо",
+            catalogTitle: "Мини каталоги моделҳо",
+            catalogText: "Корточкаҳои модел, кушодани TD1 ва дархости пешниҳоди тиҷоратӣ бидуни нархҳо.",
+            searchPlaceholder: "Ҷустуҷӯ аз рӯи силсила, модел, истифода",
+            filterAll: "Ҳамаи намудҳо",
+            filterApplicationAll: "Ҳамаи соҳаҳо",
+            selectorTitle: "Интихоби муҳаррик",
+            selectorText: "Пурсишномаи оддӣ барои тавсияи аввалин модел.",
+            selectorFormTitle: "Пурсишнома",
+            fieldType: "Намуди таҷҳизот",
+            optMulti: "Гардиши бисёр",
+            optPart: "Гардиши нопурра",
+            optControl: "Блоки идоракунӣ",
+            optGearbox: "Редуктор",
+            fieldApplication: "Соҳа",
+            fieldControl: "Идоракунӣ",
+            optAny: "Ҳар гуна",
+            optNone: "Зарур нест",
+            fieldEx: "Иҷро",
+            optStandard: "Стандарт",
+            fieldTorque: "Лаҳзаи талабшаванда, Нм",
+            selectBtn: "Интихоби модел",
+            resetBtn: "Тозакунӣ",
+            selectorResultTitle: "Натиҷаи интихоб",
+            selectorResultText: "Параметрҳоро интихоб кунед ва тугмаи интихобро пахш кунед.",
+            quoteBuilderTitle: "Дархости нарх",
+            quoteBuilderText: "Аз каталог ё натиҷаи интихоб моделҳо илова кунед.",
+            thModel: "Модел",
+            thQty: "Миқдор",
+            quoteEmpty: "Мавқеъҳои интихобшуда вуҷуд надоранд.",
+            summaryItems: "Мавқеъҳо",
+            summaryQty: "Миқдор",
+            summaryStatus: "Арзиш",
+            priceOnRequest: "Нарх аз рӯи дархост",
+            buildQuoteBtn: "Ташаккули дархост",
+            solutionsTitle: "Ҳалҳо",
+            solutionsText: "Соҳаҳои истифодаи муҳаррикҳои AUMA ва сенарияҳои маъмул дар Осиёи Марказӣ.",
+            seg1Title: "Таъминоти об ва обрезӣ",
+            seg1Text: "Истгоҳҳои насос, иншооти тозакунӣ, системаҳои қубури шаҳрӣ ва саноатӣ.",
+            seg2Title: "Энергетика",
+            seg2Text: "НЭС, ГРЭС, гидроэнергетика ва инфрасохтори энергетикӣ бо талаботи баланди эътимоднокӣ.",
+            seg3Title: "Соҳаи нефту газ",
+            seg3Text: "Қубурҳо, коркард, насос ва гиреҳҳо бо талаботи ҳифз ва назорат.",
+            serviceTitle: "Хизматрасонӣ",
+            serviceText: "Хизмати сервис мувофиқи стандартҳои байналмилалӣ кор мекунад.",
+            srv1Title: "Насб ва ба кор андохтан",
+            srv1Text: "Танзим, санҷиш ва ба кор андохтани таҷҳизот дар объект.",
+            srv2Title: "Диагностика ва хизматрасонӣ",
+            srv2Text: "Хизматрасонии банақша, бартараф кардани нуқсонҳо ва тавсияҳо оид ба истифода.",
+            srv3Title: "Таъмир ва навсозӣ",
+            srv3Text: "Таъмир, иваз кардани гиреҳҳо ва навсозӣ барои талаботи ҷории объект.",
+            contactsTitle: "Тамос ва ариза",
+            contactsText: "Барои саволҳои умумӣ, фурӯш ё хизматрасонӣ бо мо тамос гиред.",
+            contactCardTitle: "Маълумоти тамос",
+            emailMainTitle: "Почтаи тамос",
+            emailSalesTitle: "Бахши фурӯш",
+            emailServiceTitle: "Бахши хизматрасонӣ",
+            phoneTitle: "Телефон",
+            mobileTitle: "Мобилӣ",
+            formTitle: "Гузоштани ариза",
+            fieldName: "Ном",
+            fieldNamePlaceholder: "Номи шумо",
+            fieldCompany: "Ширкат",
+            fieldCompanyPlaceholder: "Номи ширкат",
+            fieldPhone: "Телефон",
+            fieldPhonePlaceholder: "Телефони тамос",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Почтаи корӣ",
+            fieldEquipment: "Намуди таҷҳизот",
+            optEquipmentDefault: "Намудро интихоб кунед",
+            optEquipment1: "Муҳаррики гардиши бисёр",
+            optEquipment2: "Муҳаррики гардиши нопурра",
+            optEquipment3: "Блоки идоракунӣ",
+            optEquipment4: "Редуктор",
+            fieldIndustry: "Соҳа",
+            optIndustryDefault: "Соҳаро интихоб кунед",
+            optIndustry1: "Об ва обрезӣ",
+            optIndustry2: "Энергетика",
+            optIndustry3: "Нефту газ",
+            optIndustry4: "Саноат",
+            fieldTask: "Тавсифи вазифа",
+            fieldTaskPlaceholder: "Объект, арматура, шароити корро тавсиф кунед",
+            formSubmit: "Фиристодани ариза",
+            formNote: "Дар қадами баъдӣ мегардад фиристодан ба email ё CRM.",
+            formSuccess: "Ариза фиристода шуд! Ба зудӣ тамос мегирем.",
+            footerText: "Дистрибьютори расмии AUMA дар Осиёи Марказӣ.",
+            backTop: "Боло",
+          },
+
+          ky: {
+            brandRegion: "Борбордук Азия",
+            navDrives: "Жетектин түрлөрү",
+            navCatalog: "Каталог",
+            navSelector: "Тандоо",
+            navSolutions: "Чечимдер",
+            navService: "Сервис",
+            navContacts: "Байланыш",
+            eyebrow: "Жетектер жана арматура автоматикасы",
+            heroTitle: "AUMA Борбордук Азия — сайт, каталог, тандоо жана баа суроо бир куралда",
+            heroText: "Борбордук Азия долбоорлору үчүн заманбап электр жетектери, редукторлор, башкаруу блоктору, сервис жана жабдыктарды тез тандоо.",
+            heroCtaPrimary: "Жетек тандоо",
+            heroCtaSecondary: "Каталогду ачуу",
+            drivesTitle: "Жетектин түрлөрү",
+            drivesText: "Энергетика, мунай-газ, суу менен камсыздоо жана өнөр жай долбоорлору үчүн AUMA негизги сериялары.",
+            series1Text: "Задвижкалар жана вентилдер үчүн көп айланмалуу жетектер.",
+            series1Li1: "32 000 Нм чейин айланма момент",
+            series1Li2: "Оор шарттарда иштөө",
+            series1Li3: "AC жана AM менен шайкеш",
+            series2Text: "Заслонкалар жана крандар үчүн толук эмес айланмалуу жетектер.",
+            series2Li1: "90° чейин айланма бурч",
+            series2Li2: "Жогорку ишенимдүүлүк",
+            series2Li3: "Компакттуу өлчөмдөр",
+            series3Text: "Жетектерди интеллектуалдуу башкаруу блоктору.",
+            series3Li1: "SCADA менен интеграция",
+            series3Li2: "Диагностика жана коргоо",
+            series3Li3: "Алыстан башкаруу",
+            series4Text: "Айланма моментти жогорулатуу үчүн редукторлор.",
+            series4Li1: "Оор арматура үчүн",
+            series4Li2: "Жогорку жүктөмө",
+            series4Li3: "Жетектер менен айкалыштыруу",
+            showSeriesBtn: "Моделдерди көрсөтүү",
+            catalogTitle: "Мини моделдер каталогу",
+            catalogText: "Модель карточкалары жана баасыз коммерциялык сунуш суроо.",
+            searchPlaceholder: "Сериясы, модели, колдонулушу боюнча издөө",
+            filterAll: "Бардык түрлөр",
+            filterApplicationAll: "Бардык тармактар",
+            selectorTitle: "Жетекти тандоо",
+            selectorText: "Модель үчүн алгачкы сунуш берүүчү жөнөкөй суроолор.",
+            selectorFormTitle: "Суроолор",
+            fieldType: "Жабдыктын түрү",
+            optMulti: "Көп айланмалуу",
+            optPart: "Толук эмес айланмалуу",
+            optControl: "Башкаруу блогу",
+            optGearbox: "Редуктор",
+            fieldApplication: "Тармак",
+            fieldControl: "Башкаруу",
+            optAny: "Каалаган",
+            optNone: "Керек эмес",
+            fieldEx: "Аткаруу",
+            optStandard: "Стандарт",
+            fieldTorque: "Талап кылынган момент, Нм",
+            selectBtn: "Модель тандоо",
+            resetBtn: "Тазалоо",
+            selectorResultTitle: "Тандоо натыйжасы",
+            selectorResultText: "Параметрлерди тандап, тандоо баскычын басыңыз.",
+            quoteBuilderTitle: "Баа суроо",
+            quoteBuilderText: "Каталогдон же тандоо натыйжасынан моделдер кошуңуз.",
+            thModel: "Модель",
+            thQty: "Саны",
+            quoteEmpty: "Тандалган позициялар жок.",
+            summaryItems: "Позициялар",
+            summaryQty: "Саны",
+            summaryStatus: "Наркы",
+            priceOnRequest: "Баасы суроо боюнча",
+            buildQuoteBtn: "Суроо түзүү",
+            solutionsTitle: "Чечимдер",
+            solutionsText: "AUMA жетектеринин колдонулуш тармактары жана Борбордук Азиядагы типтүү сценарийлер.",
+            seg1Title: "Суу менен камсыздоо жана канализация",
+            seg1Text: "Насос станциялары, тазалоо имараттары, муниципалдык жана өнөр жай түтүк системалары.",
+            seg2Title: "Энергетика",
+            seg2Text: "ЖЭС, ГРЭС, гидроэнергетика жана жогорку ишенимдүүлүк талаптары бар энергетика инфраструктурасы.",
+            seg3Title: "Мунай-газ тармагы",
+            seg3Text: "Түтүктөр, иштетүү, сордуруу жана коргоо жана көзөмөл талаптары бар түйүндөр.",
+            serviceTitle: "Сервис",
+            serviceText: "Сервис кызматы эл аралык стандарттарга ылайык иштейт.",
+            srv1Title: "Монтаж жана иштетүүгө киргизүү",
+            srv1Text: "Жөнгө салуу, текшерүү жана объектте жабдыктарды иштетүүгө киргизүү.",
+            srv2Title: "Диагностика жана тейлөө",
+            srv2Text: "Пландаштырылган тейлөө, кемчиликтерди жоюу жана пайдалануу боюнча сунуштар.",
+            srv3Title: "Оңдоо жана модернизация",
+            srv3Text: "Оңдоо, түйүндөрдү алмаштыруу жана объекттин учурдагы талаптарына ылайыктоо.",
+            contactsTitle: "Байланыш жана арыз",
+            contactsText: "Жалпы суроолор, сатуу же сервис боюнча биз менен байланышыңыз.",
+            contactCardTitle: "Байланыш маалыматы",
+            emailMainTitle: "Байланыш почтасы",
+            emailSalesTitle: "Сатуу бөлүмү",
+            emailServiceTitle: "Сервис бөлүмү",
+            phoneTitle: "Телефон",
+            mobileTitle: "Мобилдүү",
+            formTitle: "Арыз калтыруу",
+            fieldName: "Ат",
+            fieldNamePlaceholder: "Атыңыз",
+            fieldCompany: "Компания",
+            fieldCompanyPlaceholder: "Компаниянын аты",
+            fieldPhone: "Телефон",
+            fieldPhonePlaceholder: "Байланыш телефону",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Жумуш почтасы",
+            fieldEquipment: "Жабдыктын түрү",
+            optEquipmentDefault: "Түрдү тандаңыз",
+            optEquipment1: "Көп айланмалуу жетек",
+            optEquipment2: "Толук эмес айланмалуу жетек",
+            optEquipment3: "Башкаруу блогу",
+            optEquipment4: "Редуктор",
+            fieldIndustry: "Тармак",
+            optIndustryDefault: "Тармакты тандаңыз",
+            optIndustry1: "Суу жана канализация",
+            optIndustry2: "Энергетика",
+            optIndustry3: "Мунай-газ",
+            optIndustry4: "Өнөр жай",
+            fieldTask: "Тапшырманын сүрөттөлүшү",
+            fieldTaskPlaceholder: "Объектти, арматураны, иш шарттарын сүрөттөңүз",
+            formSubmit: "Арыз жөнөтүү",
+            formNote: "Кийинки кадамда email же CRM-ге жөнөтүүнү туташтырса болот.",
+            formSuccess: "Арыз жөнөтүлдү! Жакын арада байланышабыз.",
+            footerText: "Борбордук Азиядагы AUMA расмий дистрибьютору.",
+            backTop: "Жогору",
+          },
+
+          en: {
+            brandRegion: "Central Asia",
+            navDrives: "Drive Types",
+            navCatalog: "Catalog",
+            navSelector: "Selection",
+            navSolutions: "Solutions",
+            navService: "Service",
+            navContacts: "Contacts",
+            eyebrow: "Actuators and valve automation",
+            heroTitle: "AUMA Central Asia — website, catalog, selection and price request in one tool",
+            heroText: "Modern electric actuators, gearboxes, control units, service and fast equipment selection for projects in Central Asia.",
+            heroCtaPrimary: "Select actuator",
+            heroCtaSecondary: "Open catalog",
+            drivesTitle: "Drive Types",
+            drivesText: "Main AUMA series for projects in energy, oil & gas, water supply and industry.",
+            series1Text: "Multi-turn actuators for gate valves and globe valves.",
+            series1Li1: "Torque up to 32,000 Nm",
+            series1Li2: "Operation in harsh conditions",
+            series1Li3: "Compatible with AC and AM",
+            series2Text: "Part-turn actuators for butterfly valves and ball valves.",
+            series2Li1: "Rotation angle up to 90°",
+            series2Li2: "High reliability",
+            series2Li3: "Compact dimensions",
+            series3Text: "Intelligent actuator control units.",
+            series3Li1: "SCADA integration",
+            series3Li2: "Diagnostics and protection",
+            series3Li3: "Remote control",
+            series4Text: "Gearboxes for increasing torque.",
+            series4Li1: "For heavy-duty valves",
+            series4Li2: "High load capacity",
+            series4Li3: "Combination with actuators",
+            showSeriesBtn: "Show models",
+            catalogTitle: "Mini model catalog",
+            catalogText: "Model cards, TD1 opening and price request without displaying prices.",
+            searchPlaceholder: "Search by series, model, application",
+            filterAll: "All types",
+            filterApplicationAll: "All industries",
+            selectorTitle: "Actuator selection",
+            selectorText: "Simple questionnaire for initial model recommendation.",
+            selectorFormTitle: "Questionnaire",
+            fieldType: "Equipment type",
+            optMulti: "Multi-turn",
+            optPart: "Part-turn",
+            optControl: "Control unit",
+            optGearbox: "Gearbox",
+            fieldApplication: "Industry",
+            fieldControl: "Control",
+            optAny: "Any",
+            optNone: "Not required",
+            fieldEx: "Version",
+            optStandard: "Standard",
+            fieldTorque: "Required torque, Nm",
+            selectBtn: "Select model",
+            resetBtn: "Reset",
+            selectorResultTitle: "Selection result",
+            selectorResultText: "Select parameters and click the selection button.",
+            quoteBuilderTitle: "Price request",
+            quoteBuilderText: "Add models from the catalog or selection result.",
+            thModel: "Model",
+            thQty: "Qty",
+            quoteEmpty: "No positions selected yet.",
+            summaryItems: "Items",
+            summaryQty: "Quantity",
+            summaryStatus: "Price",
+            priceOnRequest: "Price on request",
+            buildQuoteBtn: "Build request",
+            solutionsTitle: "Solutions",
+            solutionsText: "AUMA actuator application industries and typical scenarios in Central Asia.",
+            seg1Title: "Water supply and wastewater",
+            seg1Text: "Pumping stations, treatment plants, municipal and industrial pipeline systems.",
+            seg2Title: "Power generation",
+            seg2Text: "Thermal and hydroelectric power plants with high reliability requirements.",
+            seg3Title: "Oil & Gas industry",
+            seg3Text: "Pipelines, processing, pumping and nodes with protection and control requirements.",
+            serviceTitle: "Service",
+            serviceText: "Service team operates according to international standards throughout the equipment lifecycle.",
+            srv1Title: "Installation and commissioning",
+            srv1Text: "Setup, testing and equipment launch at the facility.",
+            srv2Title: "Diagnostics and maintenance",
+            srv2Text: "Scheduled maintenance, troubleshooting and operational recommendations.",
+            srv3Title: "Repair and modernization",
+            srv3Text: "Repair, component replacement and modernization for current facility requirements.",
+            contactsTitle: "Contacts and inquiry",
+            contactsText: "Contact us for general questions, sales or service.",
+            contactCardTitle: "Contact information",
+            emailMainTitle: "General email",
+            emailSalesTitle: "Sales department",
+            emailServiceTitle: "Service department",
+            phoneTitle: "Phone",
+            mobileTitle: "Mobile",
+            formTitle: "Leave a request",
+            fieldName: "Name",
+            fieldNamePlaceholder: "Your name",
+            fieldCompany: "Company",
+            fieldCompanyPlaceholder: "Company name",
+            fieldPhone: "Phone",
+            fieldPhonePlaceholder: "Contact phone",
+            fieldEmail: "Email",
+            fieldEmailPlaceholder: "Work email",
+            fieldEquipment: "Equipment type",
+            optEquipmentDefault: "Select type",
+            optEquipment1: "Multi-turn actuator",
+            optEquipment2: "Part-turn actuator",
+            optEquipment3: "Control unit",
+            optEquipment4: "Gearbox",
+            fieldIndustry: "Industry",
+            optIndustryDefault: "Select industry",
+            optIndustry1: "Water and wastewater",
+            optIndustry2: "Power generation",
+            optIndustry3: "Oil & Gas",
+            optIndustry4: "Industry",
+            fieldTask: "Task description",
+            fieldTaskPlaceholder: "Describe the facility, valves, operating conditions and requirements",
+            formSubmit: "Submit request",
+            formNote: "Next step: connect email or CRM submission.",
+            formSuccess: "Request submitted! We will contact you shortly.",
+            footerText: "Official AUMA distributor in Central Asia.",
+            backTop: "Back to top",
+          },
+        };
+
+        let currentDict = dicts.ru;
+
+        function applyLang(lang) {
+          const d = dicts[lang];
+          if (!d) return;
+          currentDict = d;
+
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (d[key] !== undefined) el.textContent = d[key];
+          });
+
+          document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (d[key] !== undefined) el.placeholder = d[key];
+          });
+
+          document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+          });
+
+          document.documentElement.lang = lang;
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+        });
+
+        applyLang('ru');
+
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+
+          const data = {
+            access_key: '5d058185-8d27-4268-b318-c20d6058e490',
+            to: 'info@act-ser.kz',
+            subject: 'Новая заявка — AUMA Central Asia',
+            name: document.getElementById('name').value,
+            company: document.getElementById('company').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            equipment: document.getElementById('equipment').value,
+            industry: document.getElementById('industry').value,
+            task: document.getElementById('task').value,
+          };
+
+          const btn = this.querySelector('button[type="submit"]');
+          btn.disabled = true;
+
+          try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+
+            const json = await res.json();
+            if (json.success) {
+              const toast = document.getElementById('toast');
+              document.getElementById('toastMsg').textContent = currentDict.formSuccess;
+              toast.classList.add('show');
+              setTimeout(() => toast.classList.remove('show'), 4000);
+              this.reset();
+            } else {
+              alert('Ошибка отправки. Попробуйте ещё раз.');
+            }
+          } catch {
+            alert('Ошибка сети. Попробуйте ещё раз.');
+          } finally {
+            btn.disabled = false;
+          }
+        });
+    </script>
+    <div class="toast" id="toast">
+      <div class="toast-icon">✓</div>
+      <span id="toastMsg">Заявка отправлена! Свяжемся в ближайшее время.</span>
+    </div>
+</body>
+</html>
