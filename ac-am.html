@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUMA Central Asia</title>
+    <meta name="description" content="Официальный дистрибьютор AUMA в Центральной Азии. Электрические приводы, редукторы, блоки управления. Казахстан, Узбекистан, Кыргызстан, Таджикистан, Туркменистан.">
+    <meta name="keywords" content="AUMA, электроприводы, арматура, Казахстан, Центральная Азия, дистрибьютор">
+    <meta name="author" content="Actuator Service">
+
+    <!-- Open Graph — как сайт выглядит при шеринге в мессенджерах -->
+    <meta property="og:title" content="AUMA Central Asia — официальный дистрибьютор">
+    <meta property="og:description" content="Электрические приводы и промышленная арматура для Центральной Азии.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://auma.asia">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>  
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="logo-wrap" href="index.html" aria-label="AUMA Central Asia">
+            <img src="img/auma-logo.svg" alt="AUMA" style="height:36px;">
+            <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);" data-i18n="brandRegion">Central Asia</span>
+            </a>
+        <div class="lang-switch" aria-label="Переключение языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="kk">KZ</button>
+            <button class="lang-btn" data-lang="uz">UZ</button>
+            <button class="lang-btn" data-lang="tk">TM</button>
+            <button class="lang-btn" data-lang="tg">TJ</button>
+            <button class="lang-btn" data-lang="ky">KG</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        </div>
+    </header>
+    
+<!-- Hero-секция с крупным фото и описанием продукта -->
+    <section class="hero">
+        <div class="container">
+        <div class="hero-card">
+        <div class="hero-inner">
+
+             <!-- Левая часть — слайдер фото -->
+                <div class="visual-frame" style="position: relative; min-height: 645px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 28px;">
+          
+
+                <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <img id="slide-img" src="img/ac.png" style="max-height: 305px; object-fit: contain; transition: opacity 0.3s ease;">
+                    <div id="slide-caption" style="margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--brand); letter-spacing: 0.05em; text-transform: uppercase;">AC — с дисплеем</div>
+                </div>
+                <!-- Кнопки -->
+                <button onclick="prevSlide()" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; line-height: 1;">‹</button>
+                <button onclick="nextSlide()" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; line-height: 1;">›</button>
+
+                <!-- Точки -->
+                <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px;">
+                    <span id="dot-0" onclick="goSlide(0)" style="width: 8px; height: 8px; border-radius: 50%; background: var(--brand); cursor: pointer;"></span>
+                    <span id="dot-1" onclick="goSlide(1)" style="width: 8px; height: 8px; border-radius: 50%; background: var(--line); cursor: pointer;"></span>
+                </div>
+
+                </div>
+
+
+            <!-- Правая часть — текст -->
+            <div>
+            <div class="eyebrow" data-i18n="eyebrow">Блоки управления · Интеллектуальное управление</div>
+
+            <h1>AC / AM</h1>
+
+            <div style="margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px; color: var(--brand);">AC (с дисплеем)</h3>
+                <p style="color: var(--muted); line-height: 1.7; margin: 0;" data-i18n="descSQ">
+                Интеллектуальный блок управления с графическим дисплеем для индивидуальной настройки через меню. Поддерживает самоподстраивающиеся функции регулирования, регистрацию производственных данных и интеграцию в SCADA/РСУ через интерфейсы полевых шин. Настройка через программу AUMA CDT по Bluetooth.
+                </p>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px; color: var(--brand);">AM (без дисплея)</h3>
+                <p style="color: var(--muted); line-height: 1.7; margin: 0;" data-i18n="descSQR">
+                Простой блок управления для задач с параллельной передачей сигнала. Управление командами ОТКРЫТЬ, СТОП, ЗАКРЫТЬ. Базовая диагностика — сигналы конечных положений и общей ошибки. Опционально — передача положения арматуры в РСУ сигналом 4–20 мА.
+                </p>
+            </div>
+
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="index.html#contacts" class="btn btn-primary" style="min-width: 395px;" data-i18n="sendRequest">Отправить запрос</a>
+            </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+        <div class="footer-card">
+            <div>
+            <strong>AUMA</strong>
+            <small data-i18n="footerText">Официальный дистрибьютор AUMA в Центральной Азии.</small>
+            </div>
+            <a class="btn btn-secondary" href="index.html" data-i18n="backTop">Главная</a>
+        </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="detailModal" aria-hidden="true">
+        <div class="modal-card">
+        <div class="modal-head">
+            <div>
+            <div class="muted" id="modalSerie"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+const dicts = {
+        ru: {
+            eyebrow: "Блоки управления · Интеллектуальное управление",
+            brandRegion: "Central Asia",
+            footerText: "Официальный дистрибьютор AUMA в Центральной Азии.",
+            backTop: "Главная",
+            sendRequest: "Отправить запрос",
+            descSQ: "Интеллектуальный блок управления с графическим дисплеем для индивидуальной настройки через меню. Поддерживает самоподстраивающиеся функции регулирования, регистрацию производственных данных и интеграцию в SCADA/РСУ через интерфейсы полевых шин. Настройка через программу AUMA CDT по Bluetooth.",
+            descSQR: "Простой блок управления для задач с параллельной передачей сигнала. Управление командами ОТКРЫТЬ, СТОП, ЗАКРЫТЬ. Базовая диагностика — сигналы конечных положений и общей ошибки. Опционально — передача положения арматуры в РСУ сигналом 4–20 мА.",
+        },
+        kk: {
+            eyebrow: "Басқару блоктары · Интеллектуалды басқару",
+            brandRegion: "Орталық Азия",
+            footerText: "Орталық Азиядағы AUMA ресми дистрибьюторы.",
+            backTop: "Басты бет",
+            sendRequest: "Сұраныс жіберу",
+            descSQ: "Мәзір арқылы жеке баптауға арналған графикалық дисплейі бар интеллектуалды басқару блогы. Өздігінен реттеу функцияларын, өндірістік деректерді тіркеуді және өріс шиналары интерфейстері арқылы SCADA/РСУ-ға интеграцияны қолдайды. AUMA CDT бағдарламасы арқылы Bluetooth бойынша баптау.",
+            descSQR: "Параллель сигнал беруді қажет ететін тапсырмалар үшін қарапайым басқару блогы. АШУ, СТОП, ЖАБУ командалары арқылы басқару. Негізгі диагностика — шекті жағдайлар мен жалпы қате сигналдары. Опционалды — арматура жағдайын РСУ-ға 4–20 мА сигналымен беру.",
+        },
+        uz: {
+            eyebrow: "Boshqaruv bloklari · Intellektual boshqaruv",
+            brandRegion: "Markaziy Osiyo",
+            footerText: "Markaziy Osiyoda AUMA rasmiy distribyutori.",
+            backTop: "Bosh sahifa",
+            sendRequest: "So'rov yuborish",
+            descSQ: "Menyu orqali individual sozlash uchun grafik displeyga ega intellektual boshqaruv bloki. O'z-o'zini moslashtiradigan tartibga solish funksiyalarini, ishlab chiqarish ma'lumotlarini ro'yxatga olishni va dala shinasi interfeyslari orqali SCADA/DCS ga integratsiyani qo'llab-quvvatlaydi. Bluetooth orqali AUMA CDT dasturi yordamida sozlash.",
+            descSQR: "Parallel signal uzatish vazifalariga mo'ljallangan oddiy boshqaruv bloki. OCHISH, TO'XTATISH, YOPISH buyruqlari bilan boshqaruv. Asosiy diagnostika — oxirgi holatlar va umumiy xato signallari. Ixtiyoriy — armatura holatini DCS ga 4–20 mA signali orqali uzatish.",
+        },
+        tk: {
+            eyebrow: "Dolandyryş bloklary · Intellektual dolandyryş",
+            brandRegion: "Merkezi Aziýa",
+            footerText: "Merkezi Aziýada AUMA resmi distribýutory.",
+            backTop: "Baş sahypa",
+            sendRequest: "Sorag ibermek",
+            descSQ: "Menýu arkaly aýratyn sazlamak üçin grafiki displeýli intellektual dolandyryş blogy. Öz-özüni sazlaýan kadalaşdyrma funksiýalaryny, önümçilik maglumatlaryny hasaba almagy we meýdan şinasy interfeýsleri arkaly SCADA/DCS-a integrasiýany goldaýar. Bluetooth arkaly AUMA CDT programmasy bilen sazlamak.",
+            descSQR: "Parallel signal geçirmek wezipeleri üçin ýönekeý dolandyryş blogy. AÇ, DUR, ÝAP buýruklary bilen dolandyryş. Esasy diagnostika — soňky ýagdaý we umumy ýalňyşlyk signallary. Islege görä — armaturanyň ýagdaýyny DCS-a 4–20 mA signaly arkaly geçirmek.",
+        },
+        tg: {
+            eyebrow: "Блокҳои идоракунӣ · Идоракунии интеллектуалӣ",
+            brandRegion: "Осиёи Марказӣ",
+            footerText: "Дистрибьютори расмии AUMA дар Осиёи Марказӣ.",
+            backTop: "Саҳифаи асосӣ",
+            sendRequest: "Фиристодани дархост",
+            descSQ: "Блоки идоракунии интеллектуалӣ бо дисплейи графикӣ барои танзими инфиродӣ тавассути меню. Функсияҳои худтанзимкунии танзимотро, қайди маълумоти истеҳсолӣ ва интеграсияро ба SCADA/РСУ тавассути интерфейсҳои шинаи майдон дастгирӣ мекунад. Танзим тавассути барномаи AUMA CDT бо Bluetooth.",
+            descSQR: "Блоки оддии идоракунӣ барои вазифаҳои интиқоли параллелии сигнал. Идоракунӣ бо фармонҳои КУШ, СТОП, ПӮШ. Диагностикаи асосӣ — сигналҳои мавқеъҳои ниҳоӣ ва хатои умумӣ. Ихтиёран — интиқоли мавқеи арматура ба РСУ бо сигнали 4–20 мА.",
+        },
+        ky: {
+            eyebrow: "Башкаруу блоктору · Интеллектуалдык башкаруу",
+            brandRegion: "Борбордук Азия",
+            footerText: "Борбордук Азиядагы AUMA расмий дистрибьютору.",
+            backTop: "Башкы бет",
+            sendRequest: "Суроо жөнөтүү",
+            descSQ: "Меню аркылуу жеке баптоо үчүн графикалык дисплейи бар интеллектуалдык башкаруу блогу. Өздүгүнөн жөнгө салуу функцияларын, өндүрүштүк маалыматтарды каттоону жана талаа шинасынын интерфейстери аркылуу SCADA/РСУга интеграцияны колдойт. Bluetooth аркылуу AUMA CDT программасы менен баптоо.",
+            descSQR: "Параллель сигнал берүү тапшырмалары үчүн жөнөкөй башкаруу блогу. АЧ, СТОП, ЖАП буйруктары менен башкаруу. Негизги диагностика — чектик абалдар жана жалпы ката сигналдары. Каалоо боюнча — арматуранын абалын РСУга 4–20 мА сигналы аркылуу берүү.",
+        },
+        en: {
+            eyebrow: "Control units · Intelligent control",
+            brandRegion: "Central Asia",
+            footerText: "Official AUMA distributor in Central Asia.",
+            backTop: "Home",
+            sendRequest: "Send request",
+            descSQ: "Intelligent control unit with graphical display for individual configuration via menu. Supports self-adjusting control functions, production data logging and integration into SCADA/DCS via fieldbus interfaces. Configuration via AUMA CDT software over Bluetooth.",
+            descSQR: "Simple control unit for tasks with parallel signal transmission. Control via OPEN, STOP, CLOSE commands. Basic diagnostics — end position and general fault signals. Optional — valve position feedback to DCS via 4–20 mA signal.",
+        },
+    };
+
+        let currentDict = dicts.ru;
+
+            function applyLang(lang) {
+            const d = dicts[lang];
+            if (!d) return;
+            currentDict = d;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (d[key] !== undefined) el.textContent = d[key];
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (d[key] !== undefined) el.placeholder = d[key];
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            document.documentElement.lang = lang;
+            }
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+            });
+
+            applyLang('ru');
+
+        const slides = ['img/ac.png', 'img/am.png'];
+            const captions = ['AC — с дисплеем', 'AM — без дисплея'];
+            let currentSlide = 0;
+
+            function goSlide(n) {
+            const img = document.getElementById('slide-img');
+            img.style.opacity = '0';
+            setTimeout(() => {
+                currentSlide = n;
+                img.src = slides[currentSlide];
+                img.style.opacity = '1';
+                document.getElementById('slide-caption').textContent = captions[currentSlide];
+                document.getElementById('dot-0').style.background = currentSlide === 0 ? 'var(--brand)' : 'var(--line)';
+                document.getElementById('dot-1').style.background = currentSlide === 1 ? 'var(--brand)' : 'var(--line)';
+            }, 150);
+            }
+
+            function nextSlide() { goSlide((currentSlide + 1) % slides.length); }
+            function prevSlide() { goSlide((currentSlide - 1 + slides.length) % slides.length); 
+        }
+    </script>
+</body>
+</html>
