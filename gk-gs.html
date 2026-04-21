@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUMA Central Asia</title>
+    <meta name="description" content="Официальный дистрибьютор AUMA в Центральной Азии. Электрические приводы, редукторы, блоки управления. Казахстан, Узбекистан, Кыргызстан, Таджикистан, Туркменистан.">
+    <meta name="keywords" content="AUMA, электроприводы, арматура, Казахстан, Центральная Азия, дистрибьютор">
+    <meta name="author" content="Actuator Service">
+
+    <!-- Open Graph — как сайт выглядит при шеринге в мессенджерах -->
+    <meta property="og:title" content="AUMA Central Asia — официальный дистрибьютор">
+    <meta property="og:description" content="Электрические приводы и промышленная арматура для Центральной Азии.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://auma.asia">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>  
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="logo-wrap" href="index.html" aria-label="AUMA Central Asia">
+            <img src="img/auma-logo.svg" alt="AUMA" style="height:36px;">
+            <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);" data-i18n="brandRegion">Central Asia</span>
+            </a>
+        <div class="lang-switch" aria-label="Переключение языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="kk">KZ</button>
+            <button class="lang-btn" data-lang="uz">UZ</button>
+            <button class="lang-btn" data-lang="tk">TM</button>
+            <button class="lang-btn" data-lang="tg">TJ</button>
+            <button class="lang-btn" data-lang="ky">KG</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        </div>
+    </header>
+    
+<!-- Hero-секция с крупным фото и описанием продукта -->
+    <section class="hero">
+        <div class="container">
+        <div class="hero-card">
+        <div class="hero-inner">
+
+             <!-- Левая часть — слайдер фото -->
+                <div class="visual-frame" style="position: relative; min-height: 645px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 28px;">
+          
+
+                <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <img id="slide-img" src="img/gk.png" style="max-height: 350px; object-fit: contain; transition: opacity 0.3s ease;">
+                    <div id="slide-caption" style="margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--brand); letter-spacing: 0.05em; text-transform: uppercase;"></div>
+                </div>
+                <!-- Кнопки -->
+                <button onclick="prevSlide()" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; line-height: 1;">‹</button>
+                <button onclick="nextSlide()" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; line-height: 1;">›</button>
+
+                <!-- Точки -->
+                <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px;">
+                    <span id="dot-0" onclick="goSlide(0)" style="width: 8px; height: 8px; border-radius: 50%; background: var(--brand); cursor: pointer;"></span>
+                    <span id="dot-1" onclick="goSlide(1)" style="width: 8px; height: 8px; border-radius: 50%; background: var(--line); cursor: pointer;"></span>
+                </div>
+
+                </div>
+
+
+            <!-- Правая часть — текст -->
+            <div>
+            <div class="eyebrow" data-i18n="eyebrow">Блоки управления · Интеллектуальное управление</div>
+
+            <h1>GS / GK</h1>
+
+            <div style="margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px; color: var(--brand);">GS многооборотный редуктор</h3>
+                <p style="color: var(--muted); line-height: 1.7; margin: 0;" data-i18n="descGST">
+                GS (Цилиндрический редуктор) Многооборотные цилиндрические редукторы серии GST предназначены для увеличения крутящего момента многооборотных приводов. Применяются для управления тяжёлой арматурой — задвижками и вентилями с высоким усилием открытия. Устанавливаются между приводом и арматурой.
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px; color: var(--brand);">GK Неполнооборотный редуктор</h3>
+                <p style="color: var(--muted); line-height: 1.7; margin: 0;" data-i18n="descGK">
+                Простой блок управления для задач с параллельной передачей сигнала. Управление командами ОТКРЫТЬ, СТОП, ЗАКРЫТЬ. Базовая диагностика — сигналы конечных положений и общей ошибки. Опционально — передача положения арматуры в РСУ сигналом 4–20 мА.
+                </p>
+            </div>
+
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="index.html#contacts" class="btn btn-primary" style="min-width: 395px;" data-i18n="sendRequest">Отправить запрос</a>
+            </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+        <div class="footer-card">
+            <div>
+            <strong>AUMA</strong>
+            <small data-i18n="footerText">Официальный дистрибьютор AUMA в Центральной Азии.</small>
+            </div>
+            <a class="btn btn-secondary" href="index.html" data-i18n="backTop">Главная</a>
+        </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="detailModal" aria-hidden="true">
+        <div class="modal-card">
+        <div class="modal-head">
+            <div>
+            <div class="muted" id="modalSerie"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+    const dicts = {
+        ru: {
+            eyebrow: "Редукторы · Увеличение крутящего момента",
+            brandRegion: "Central Asia",
+            footerText: "Официальный дистрибьютор AUMA в Центральной Азии.",
+            backTop: "Главная",
+            sendRequest: "Отправить запрос",
+            Torque_range: "Диапазон крутящего момента",
+            titleGST: "GST — Цилиндрический редуктор",
+            titleGK: "GK — Конический редуктор",
+            descGST: "Многооборотные цилиндрические редукторы серии GST предназначены для увеличения крутящего момента многооборотных приводов. Применяются для управления тяжёлой арматурой — задвижками и вентилями с высоким усилием открытия. Устанавливаются между приводом и арматурой.",
+            descGK: "Конические редукторы серии GK используются когда требуется поворот направления рабочего движения на 90 градусов. Позволяют повысить исходный крутящий момент в несколько раз. Применяются в труднодоступных местах где привод невозможно установить по оси арматуры.",
+            captionGK: "GK — Конический редуктор",
+            captionGS: "GST — Цилиндрический редуктор",
+        },
+        kk: {
+            eyebrow: "Редукторлар · Бұрылыс моментін арттыру",
+            brandRegion: "Орталық Азия",
+            footerText: "Орталық Азиядағы AUMA ресми дистрибьюторы.",
+            backTop: "Басты бет",
+            sendRequest: "Сұраныс жіберу",
+            Torque_range: "Қозғалтқыш моментінің диапазоны",
+            titleGST: "GST — Цилиндрлік редуктор",
+            titleGK: "GK — Конустық редуктор",
+            descGST: "GST сериялы көпайналымды цилиндрлік редукторлар көпайналымды жетектердің бұрылыс моментін арттыруға арналған. Ашу күші жоғары ауыр арматураны — задвижкалар мен вентильдерді басқару үшін қолданылады. Жетек пен арматура арасына орнатылады.",
+            descGK: "GK сериялы конустық редукторлар жұмыс қозғалысының бағытын 90 градусқа бұру қажет болғанда қолданылады. Бастапқы бұрылыс моментін бірнеше есе арттыруға мүмкіндік береді. Жетекті арматура осіне орнату мүмкін болмайтын қол жетпейтін жерлерде қолданылады.",
+            captionGK: "GK — Конустық редуктор",
+            captionGS: "GST — Цилиндрлік редуктор",
+        },
+        uz: {
+            eyebrow: "Reduktorlar · Burilish momentini oshirish",
+            brandRegion: "Markaziy Osiyo",
+            footerText: "Markaziy Osiyoda AUMA rasmiy distribyutori.",
+            backTop: "Bosh sahifa",
+            sendRequest: "So'rov yuborish",
+            Torque_range: "Aylanma moment diapazoni",
+            titleGST: "GST — Silindrli reduktor",
+            titleGK: "GK — Konusli reduktor",
+            descGST: "GST seriyali ko'p aylanishli silindrli reduktorlar ko'p aylanishli yuritmalarning burilish momentini oshirish uchun mo'ljallangan. Ochish kuchi yuqori og'ir armatura — zasovlar va ventillarni boshqarish uchun ishlatiladi. Yuritma va armatura o'rtasiga o'rnatiladi.",
+            descGK: "GK seriyali konusli reduktorlar ish harakatining yo'nalishini 90 gradusga burish kerak bo'lganda ishlatiladi. Dastlabki burilish momentini bir necha baravar oshirish imkonini beradi. Yuritmani armatura o'qiga o'rnatib bo'lmaydigan qiyin joylarda qo'llaniladi.",
+            captionGK: "GK — Konusli reduktor",
+            captionGS: "GST — Silindrli reduktor",
+        },
+        tk: {
+            eyebrow: "Reduktorlar · Tork güýjüni artdyrmak",
+            brandRegion: "Merkezi Aziýa",
+            footerText: "Merkezi Aziýada AUMA resmi distribýutory.",
+            backTop: "Baş sahypa",
+            sendRequest: "Sorag ibermek",
+            Torque_range: "Tork diapazony",
+            titleGST: "GST — Silindrli reduktor",
+            titleGK: "GK — Konus reduktory",
+            descGST: "GST seriýaly köp aýlanmaly silindrli reduktorlar köp aýlanmaly hereketlendirijileriň tork güýjüni artdyrmak üçin niýetlenendir. Açmak güýji ýokary agyr armatura — zasowlar we wentiller üçin dolandyrmakda ulanylýar. Hereketlendiriji bilen armatura arasyna oturdylýar.",
+            descGK: "GK seriýaly konus reduktorlary iş hereketi ugurlaryny 90 dereje öwürmek zerur bolanda ulanylýar. Başlangyç tork güýjüni birnäçe esse artdyrmaga mümkinçilik berýär. Hereketlendirijini armatura okuny boýunça goýmak mümkin bolmadyk elýetmez ýerlerde ulanylýar.",
+            captionGK: "GK — Konus reduktory",
+            captionGS: "GST — Silindrli reduktor",
+        },
+        tg: {
+            eyebrow: "Редукторҳо · Зиёд кардани лаҳзаи гардиш",
+            brandRegion: "Осиёи Марказӣ",
+            footerText: "Дистрибьютори расмии AUMA дар Осиёи Марказӣ.",
+            backTop: "Саҳифаи асосӣ",
+            sendRequest: "Фиристодани дархост",
+            Torque_range: "Диапазони лаҳзаи гардиш",
+            titleGST: "GST — Редуктори силиндрӣ",
+            titleGK: "GK — Редуктори конусӣ",
+            descGST: "Редукторҳои силиндрии гардиши бисёр силсилаи GST барои зиёд кардани лаҳзаи гардиши муҳаррикҳои гардиши бисёр пешбинӣ шудаанд. Барои идоракунии арматураи вазнин — задвижкаҳо ва вентилҳо бо қувваи баланди кушодан истифода мешаванд. Байни муҳаррик ва арматура насб карда мешаванд.",
+            descGK: "Редукторҳои конусии силсилаи GK вақте истифода мешаванд, ки бояд самти ҳаракати корӣ ба 90 дараҷа тағйир дода шавад. Имкон медиҳанд лаҳзаи гардиши аввалиро чандин маротиба зиёд кунанд. Дар ҷойҳои душворрас, ки насб кардани муҳаррик аз рӯи меҳвари арматура ғайриимкон аст, истифода мешаванд.",
+            captionGK: "GK — Редуктори конусӣ",
+            captionGS: "GST — Редуктори силиндрӣ",
+        },
+        ky: {
+            eyebrow: "Редукторлор · Айлануу моментин жогорулатуу",
+            brandRegion: "Борбордук Азия",
+            footerText: "Борбордук Азиядагы AUMA расмий дистрибьютору.",
+            backTop: "Башкы бет",
+            sendRequest: "Суроо жөнөтүү",
+            Torque_range: "Айлануу моментинин диапазону",
+            titleGST: "GST — Цилиндрдик редуктор",
+            titleGK: "GK — Конустук редуктор",
+            descGST: "GST сериялуу көп айланмалуу цилиндрдик редукторлор көп айланмалуу жетектердин айлануу моментин жогорулатуу үчүн арналган. Ачуу күчү жогору оор арматураны — задвижкаларды жана вентилдерди башкаруу үчүн колдонулат. Жетек менен арматуранын ортосуна орнотулат.",
+            descGK: "GK сериялуу конустук редукторлор иш кыймылынын багытын 90 градуска бурушу керек болгондо колдонулат. Баштапкы айлануу моментин бир нече эсе жогорулатууга мүмкүндүк берет. Жетекти арматуранын огу боюнча орнотуу мүмкүн болбогон кол жеткис жерлерде колдонулат.",
+            captionGK: "GK — Конустук редуктор",
+            captionGS: "GST — Цилиндрдик редуктор",
+        },
+        en: {
+            eyebrow: "Gearboxes · Torque multiplication",
+            brandRegion: "Central Asia",
+            footerText: "Official AUMA distributor in Central Asia.",
+            backTop: "Home",
+            sendRequest: "Send request",
+            Torque_range: "Torque range",
+            titleGST: "GST — Spur gearbox",
+            titleGK: "GK — Bevel gearbox",
+            descGST: "The GST series multi-turn spur gearboxes are designed to increase the torque of multi-turn actuators. Used for controlling heavy valves — gate valves and globe valves with high opening force. Installed between the actuator and the valve.",
+            descGK: "The GK series bevel gearboxes are used when the direction of working movement needs to be turned 90 degrees. They allow multiplying the original torque several times. Used in hard-to-reach places where the actuator cannot be installed along the valve axis.",
+            captionGK: "GK — Bevel gearbox",
+            captionGS: "GST — Spur gearbox",
+        },
+};
+        let currentDict = dicts.ru;
+
+            function applyLang(lang) {
+            const d = dicts[lang];
+            if (!d) return;
+            currentDict = d;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (d[key] !== undefined) el.textContent = d[key];
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (d[key] !== undefined) el.placeholder = d[key];
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            document.documentElement.lang = lang;
+            }
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+            });
+
+            applyLang('ru');
+
+        const slides = ['img/gk.png', 'img/gs.png'];
+            const captions = ['GK — Многооборотный редуктор', 'GS — Неполнооборотный редуктор'];
+            let currentSlide = 0;
+
+            function goSlide(n) {
+            const img = document.getElementById('slide-img');
+            img.style.opacity = '0';
+            setTimeout(() => {
+                currentSlide = n;
+                img.src = slides[currentSlide];
+                img.style.opacity = '1';
+                document.getElementById('slide-caption').textContent = captions[currentSlide];
+                document.getElementById('dot-0').style.background = currentSlide === 0 ? 'var(--brand)' : 'var(--line)';
+                document.getElementById('dot-1').style.background = currentSlide === 1 ? 'var(--brand)' : 'var(--line)';
+            }, 150);
+            }
+
+            function nextSlide() { goSlide((currentSlide + 1) % slides.length); }
+            function prevSlide() { goSlide((currentSlide - 1 + slides.length) % slides.length); 
+        }
+    </script>
+</body>
+</html>
